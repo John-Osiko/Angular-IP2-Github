@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { RepoRequest } from '../repo-request';
 import { Observable } from 'rxjs';
 import { environment} from '../../environments/environment';
@@ -10,7 +10,7 @@ import { environment} from '../../environments/environment';
 export class SearchmygitService {
 
   baseURL = 'https://api.github.com';
-  constructor(private http: HttpClientModule) {
+  constructor(private http: HttpClient) {
   }
 
   getRepos(userName: string): Observable<RepoRequest[]> {
