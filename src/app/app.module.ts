@@ -12,6 +12,7 @@ import { RepoRequest } from './repo-request';
 import { User } from './user';
 import { AlertService } from './alert-service/alert.service';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'landing', component: LandingComponent }
@@ -27,8 +28,7 @@ const routes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    RepoRequest,
-    User,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [SearchmygitService, ProfileRequestServiceService, AlertService],
